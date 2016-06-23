@@ -18,7 +18,6 @@ namespace SlotMachine
          * - MaximumBet
          * - CurrentBet
          * Methods:
-         * - PlaceBet(int numberOfPennies)
          * - PullLever()
          * - DisplayResults()
          * - GetPayout()
@@ -49,6 +48,43 @@ namespace SlotMachine
                 }
             }
         }
+
+        /// <summary>
+        /// An array of integers that is as long as the number of slots,
+        /// with each element of the array representing a different slot
+        /// </summary>
+        private int[] icons;
+
+        /// <summary>
+        /// Randomizes the contents of the icons
+        /// </summary>
+        public void PullLever()
+        {
+            // TODO
+        }
+
+        /// <summary>
+        /// Return the results from the slots
+        /// </summary>
+        /// <returns>an int[] with each slot as an element of the array</returns>
+        public int[] GetResults()
+        {
+            // TODO
+            return null;
+        }
+
+        /// <summary>
+        /// Examine the contents of the slots and determine the appropriate payout
+        /// based upon the CurrentBet.
+        /// </summary>
+        /// <returns>number of pennies to pay out</returns>
+        public int GetPayout()
+        {
+            // TODO
+            return 0;
+        }
+
+
 
     }
 }
