@@ -8,25 +8,12 @@ namespace SlotMachine
 {
     class SlotMachine
     {
-        /*
-         * Classes We Make:
-         * SlotMachine
-         * Properties:
-         * - NumberOfSlots
-         * - IconsPerSlot
-         * - MinimumBet
-         * - MaximumBet
-         * - CurrentBet
-         * Methods:
-         * - PullLever()
-         * - DisplayResults()
-         * - GetPayout()
-         */
-
         public int NumberOfSlots { get; set; }
+
         public int IconsPerSlot { get; set; }
         public int MinimumBet { get; set; }
         public int MaximumBet { get; set; }
+        
 
         private int _currentBet;
         public int CurrentBet
@@ -54,6 +41,15 @@ namespace SlotMachine
         /// with each element of the array representing a different slot
         /// </summary>
         private int[] icons;
+
+
+        public SlotMachine()
+        {
+            NumberOfSlots = 3;
+            IconsPerSlot = 5;
+            MinimumBet = 1;
+            MaximumBet = 100;
+        }
 
         /// <summary>
         /// Randomizes the contents of the icons
