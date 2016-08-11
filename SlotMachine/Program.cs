@@ -17,6 +17,8 @@ namespace SlotMachine
          * Randomly rolls around and gives you 
          * Machine tells you if you won or not
          */
+
+
         static void Main(string[] args)
         {
             SlotMachine myMachine = new SlotMachine(); // 3 slots, 5 icons per slot
@@ -46,11 +48,14 @@ namespace SlotMachine
                 {
                     Console.Write(tempResults[i] + " ");
                 }
+                {
 
-                // payout
-                Console.WriteLine("You won {0} pennies!", myMachine.GetPayout());
+
+                    // payout
+                    Console.WriteLine("You won {0} pennies!", myMachine.GetPayout());
+                }
+
             }
-
         }
     }
 }

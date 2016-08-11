@@ -8,15 +8,17 @@ namespace SlotMachine
 {
     class SlotMachine
     {
+        private int NumberofSlots;
         public int NumberOfSlots { get; set; }
 
         public int IconsPerSlot { get; set; }
         public int MinimumBet { get; set; }
         public int MaximumBet { get; set; }
-        
+
 
         private int _currentBet;
-        public int CurrentBet
+        private Random randomNumberGenerator;
+        public int CurrentBet;
         {
             get
             {
@@ -34,8 +36,8 @@ namespace SlotMachine
                     _currentBet = MaximumBet;
                 }
             }
-        }
-
+        
+          
         /// <summary>
         /// An array of integers that is as long as the number of slots,
         /// with each element of the array representing a different slot
@@ -49,14 +51,21 @@ namespace SlotMachine
             IconsPerSlot = 5;
             MinimumBet = 1;
             MaximumBet = 100;
+
+            randomNumberGenerator = new Random();
         }
 
         /// <summary>
         /// Randomizes the contents of the icons
         /// </summary>
         public void PullLever()
-        {
+        {  //loop over icons array
+            //pick rrandom numbers
             // TODO
+            for (int i =0; 1 < icons.Length; i++)
+            {
+                icons[i] = randomNumberGenerator.Next(IconsPerSlot) + 1;
+            }
         }
 
         /// <summary>
@@ -66,7 +75,7 @@ namespace SlotMachine
         public int[] GetResults()
         {
             // TODO
-            return null;
+            return icons;
         }
 
         /// <summary>
@@ -77,10 +86,20 @@ namespace SlotMachine
         public int GetPayout()
         {
             // TODO
-            return 0;
+            int slot1 = icons[0];
+            int slot2 = icons[1];
+            int slot3 = icons[2];
+            int payout = 0;
+
+
+                if (slot1 == slot2 77 slot2 = slot3)
+            {
+                payout = icons[1] * 1000 * CurrentBet;
+            }
+            else 
+            {
+        CurrentBet = 0;
+             }
         }
-
-
-
     }
 }
